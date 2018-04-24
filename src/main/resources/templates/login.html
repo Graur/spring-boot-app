@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Login page</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript-->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <link href="css/signin.css" rel="stylesheet"/>
+
+</head>
+
+<body>
+<div class="container">
+    <form class="form-signin" role="form" action="" method="POST" >
+        <h2 class="form-signin-heading">Please sign in!</h2>
+        <input type="text" class="form-control" placeholder="Login" required="" autofocus="" name="login"/>
+        <input type="password" class="form-control" placeholder="Password" required="" name="password"/>
+        <br/>
+        <div th:if="${loginError}" class="error">
+            <div style="color:red">
+                Bad Credentials!
+            </div>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="Submit">Sign in</button>
+    </form>
+</div><!-- /container -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+</body>
+</html>
