@@ -61,7 +61,7 @@ public class UsersController {
     //URL ="insert", add user
     @RequestMapping(value = "/admin/insert", method = RequestMethod.GET)
     public ModelAndView insertUserForm() {
-        ModelAndView mav = new ModelAndView("user_form");
+        ModelAndView mav = new ModelAndView("users_list");
         //logger.info("add user form");
         return mav;
     }
@@ -88,7 +88,7 @@ public class UsersController {
     //URL ="update", update user
     @RequestMapping(value = "/admin/update", method = RequestMethod.GET)
     public ModelAndView updateUserForm(@ModelAttribute User user) {
-        ModelAndView mav = new ModelAndView("user_form");
+        ModelAndView mav = new ModelAndView("users_list");
         int updateUserId = user.getId();
         User existingUser = userService.getUser(updateUserId);
         mav.addObject("user", existingUser);
