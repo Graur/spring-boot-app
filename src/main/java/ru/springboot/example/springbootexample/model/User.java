@@ -35,7 +35,6 @@ public class User implements UserDetails {
     @Column(name = "enabled", nullable = false)
     private Boolean enabled = true;
 
-
     public User() {
     }
 
@@ -63,7 +62,6 @@ public class User implements UserDetails {
         this.login = login;
     }
 
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return roles;
@@ -72,7 +70,6 @@ public class User implements UserDetails {
     public String getPassword() {
         return password;
     }
-
 
     public String getUsername() {
         return login;
